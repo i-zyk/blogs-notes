@@ -42,19 +42,17 @@ webpack是一个现代JavaScript应用程序的静态模块打包工具。当web
 
 **AMD「require.js」**
 
-[AMD规范使用示例](./amd/)
+[AMD规范使用示例](./amd/) --- [https://requirejs.org](https://requirejs.org)
 
 requirejs.js 是AMD模块化思想：按需导入、依赖管理, AMD 思想的一个问题：所有依赖的模块都需要前置导入
 
-[https://requirejs.org](https://requirejs.org)
+
 
 **CommonJS模块化规范**
 
 [CommonJS模块化使用示例](./commonjs/)
 
 CommonJS 模块化导出规范
-
-    
 
 * 导出 module.exports = {}; 
   + let obj = require('./模块地址'); 
@@ -74,9 +72,7 @@ CommonJS 模块化导出规范
 
 **ES6Module模块规范**
 
-[ES6Module模块规范使用示例](./ES6Module)
-
-[阮一峰的博客链接(详细介绍了ES6模块化的使用)](https://es6.ruanyifeng.com/#docs/module)
+[ES6Module模块规范使用示例](./ES6Module) --- [阮一峰的博客链接(详细介绍了ES6模块化的使用)](https://es6.ruanyifeng.com/#docs/module)
 
 * 导出
   + 支持export导出多个的“导入方式”
@@ -119,6 +115,7 @@ webpack环境下，即支持CommonJS规范，也支持ES6Module规范，而且�
 ### 3.webpack的基础操作
 
 [webpack使用示例](./webpack)
+
 **安装**
 
 想用webpack必须提前安装：webpack webpack-cli
