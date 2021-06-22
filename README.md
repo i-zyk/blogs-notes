@@ -12,6 +12,6 @@
      + [Item 4: **数据类型转换机制大汇总**](javascript/4.数据类型转换机制大汇总.md)
   + Chapter 2 **闭包作用域**
     + [Item 5: **函数的底层处理机制**](javascript/5.函数的底层处理机制.md)
-    + [Item 6: **JS代码执行的预处理机制：变量提升**](javascript/6.JS代码执行的预处理机制：变量提升.md)
+    + [Item 6: **JS代码执行的预处理机制：变量提升**](javascript/6.JS代码执行的预处理机制"变量提升".md)
   + Chapter 3 **事件传播机制**
   + Chapter 4 **面向对象**
