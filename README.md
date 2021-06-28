@@ -13,5 +13,6 @@
   + Chapter 2 **闭包作用域**
     + [Item 5: **函数的底层处理机制**](javascript/5.函数的底层处理机制.md)
     + [Item 6: **JS代码执行的预处理机制：变量提升**](javascript/6.JS代码执行的预处理机制"变量提升".md)
+    + [Item 7: **关于JS中THIS的基本情况分析**](javascript/7.关于JS中THIS的基本情况分析.md)
   + Chapter 3 **事件传播机制**
   + Chapter 4 **面向对象**
