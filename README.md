@@ -14,5 +14,8 @@
     + [Item 5: **函数的底层处理机制**](javascript/5.函数的底层处理机制.md)
     + [Item 6: **JS代码执行的预处理机制：变量提升**](javascript/6.JS代码执行的预处理机制"变量提升".md)
     + [Item 7: **关于JS中THIS的基本情况分析**](javascript/7.关于JS中THIS的基本情况分析.md)
+    + [Item 8: **闭包作用域和浏览器垃圾回收机制**](javascript/8.闭包作用域和浏览器垃圾回收机制.md)
+    + [Item 9: **LET&VAR详细的区别**](javascript/9.LET&VAR详细的区别.md)
+    + [Item 10: **闭包在项目中的应用**](javascript/10.闭包在项目中的应用.md)
   + Chapter 3 **事件传播机制**
   + Chapter 4 **面向对象**
