@@ -17,5 +17,6 @@
     + [Item 8: **闭包作用域和浏览器垃圾回收机制**](javascript/8.闭包作用域和浏览器垃圾回收机制.md)
     + [Item 9: **LET&VAR详细的区别**](javascript/9.LET&VAR详细的区别.md)
     + [Item 10: **闭包在项目中的应用**](javascript/10.闭包在项目中的应用.md)
+    + [Item 11: **11.闭包作用域的例题**](javascript/11.闭包作用域的例题.md)
   + Chapter 3 **事件传播机制**
   + Chapter 4 **面向对象**
