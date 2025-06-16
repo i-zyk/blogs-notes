@@ -1,0 +1,29 @@
+{
+  "name": "yd-ai-dapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client:dev": "webpack --mode development",
+    "client:server": "webpack serve --mode development",
+    "client:prod": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@swc/core": "^1.12.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "swc-loader": "^0.2.6",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "yargs-parser": "^22.0.0"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  }
+}
