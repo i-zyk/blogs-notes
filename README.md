@@ -21,4 +21,4 @@
   + Chapter 3 **事件传播机制**
   + Chapter 4 **面向对象**
 + List 3 **前端架构设计指南**
-  + [Item 1: **前端架构设计指南1**](architecture-design/1.前端架构设计指南1.md)
+  + [Item 1: **前端架构设计指南1**](architecture/1.前端架构设计指南1.md)
