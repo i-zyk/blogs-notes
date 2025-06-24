@@ -1,0 +1,25 @@
+@import "tailwindcss";
+html {
+  transition: font-size 0.3s ease;
+}
+
+:root {
+  --foreground: #333;
+  --background: #f0f0f0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  /* body: (ctx) => {
+    // css hudini css框架
+    cosole.log(1233)
+  } */
+}
+
+h1 {
+  color: yellowgreen;
+  /* transform原理矩阵martix， css gpu加速 */
+  martix: 0.99 0.01 -0.01 0.99;
+}

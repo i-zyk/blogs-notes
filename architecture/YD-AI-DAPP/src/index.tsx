@@ -1,12 +1,14 @@
+import './style.css';
 import { createRoot } from 'react-dom/client';
-
 import { BrowserRouter } from 'react-router-dom';
 // import './wdyr';
-import './index.css';
+
 const App = () => {
 	return (
 		<>
-			<h1>1111</h1>
+			<h1 className="text-8xl font-bold underline">
+				Hello world!
+			</h1>
 		</>
 	);
 };
