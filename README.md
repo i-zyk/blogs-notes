@@ -37,6 +37,6 @@
   + [Item 14: **算法设计思想之“贪心算法”**](algorithms/14.算法设计思想之“贪心算法”.md)
   + [Item 15: **算法设计思想之“回溯算法”**](algorithms/15.算法设计思想之“回溯算法”.md)
 + List 4 **前端架构设计指南**
-  + [Item 1: **前端架构设计指南1**](architecture/1-2.前端架构设计指南1.md)
-  + [Item 2: **前端架构设计指南2**](architecture/3.前端架构设计指南2.md)
-  + [Item 3: **前端架构设计指南3**](architecture/4.前端架构设计指南3.md)
+  + [Item 1: **前端架构设计指南1**](architecture/1.前端架构设计指南1-2.md)
+  + [Item 2: **前端架构设计指南2**](architecture/2.前端架构设计指南3.md)
+  + [Item 3: **前端架构设计指南3**](architecture/3.前端架构设计指南4.md)
