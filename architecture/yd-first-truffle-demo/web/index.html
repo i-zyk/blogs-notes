@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoContract DApp</title>
+    <script src="./node_modules/ethers/dist/ethers.umd.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fafafa;
+      }
+      .section h3 {
+        margin-top: 0;
+        color: #555;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      input[type='text'],
+      input[type='number'] {
+        width: 200px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 5px;
+      }
+      .status {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+      .success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      .error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+      .info {
+        background-color: #d1ecf1;
+        color: #0c5460;
+        border: 1px solid #bee5eb;
+      }
+      .hidden {
+        display: none;
+      }
+      #accountInfo {
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>InfoContract DApp</h1>
+
+      <!-- 钱包连接部分 -->
+      <div class="section">
+        <h3>🔗 钱包连接</h3>
+        <button id="connectWallet">连接 MetaMask</button>
+        <button id="disconnectWallet" class="hidden">断开连接</button>
+        <div id="accountInfo" class="hidden"></div>
+        <div id="connectionStatus"></div>
+      </div>
+
+      <!-- 合约交互部分 -->
+      <div id="contractSection" class="hidden">
+        <!-- sayHi 测试 -->
+        <div class="section">
+          <h3>👋 Say Hi 测试</h3>
+          <button id="sayHiBtn">调用 sayHi()</button>
+          <div id="sayHiResult"></div>
+        </div>
+
+        <!-- 设置信息 -->
+        <div class="section">
+          <h3>📝 设置信息</h3>
+          <div>
+            <input type="text" id="nameInput" placeholder="输入姓名" />
+            <input type="number" id="ageInput" placeholder="输入年龄" />
+            <button id="setInfoBtn">设置信息</button>
+          </div>
+          <div id="setInfoStatus"></div>
+        </div>
+
+        <!-- 获取信息 -->
+        <div class="section">
+          <h3>📋 获取信息</h3>
+          <button id="getInfoBtn">获取当前信息</button>
+          <div id="getInfoResult"></div>
+        </div>
+
+        <!-- 事件监听 -->
+        <div class="section">
+          <h3>📡 事件监听</h3>
+          <button id="startListening">开始监听事件</button>
+          <button id="stopListening">停止监听</button>
+          <div id="eventLog"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 合约配置
+      const CONTRACT_ADDRESS = '0xea818F417cDc980b0D271F683f5f5afc4A73D0C8';
+      const CONTRACT_ABI = [
+        {
+          inputs: [
+            { internalType: 'string', name: '_name', type: 'string' },
+            { internalType: 'uint256', name: '_age', type: 'uint256' },
+          ],
+          name: 'setInfo',
+          outputs: [],
+          stateMutability: 'nonpayable',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'sayHi',
+          outputs: [{ internalType: 'string', name: '', type: 'string' }],
+          stateMutability: 'pure',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'getInfo',
+          outputs: [
+            { internalType: 'string', name: '', type: 'string' },
+            { internalType: 'uint256', name: '', type: 'uint256' },
+          ],
+          stateMutability: 'view',
+          type: 'function',
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: 'string',
+              name: 'name',
+              type: 'string',
+            },
+            {
+              indexed: false,
+              internalType: 'uint256',
+              name: 'age',
+              type: 'uint256',
+            },
+          ],
+          name: 'Instructor',
+          type: 'event',
+        },
+      ];
+
+      // 全局变量
+      let provider = null;
+      let signer = null;
+      let contract = null;
+      let currentAccount = null;
+      let eventListener = null;
+
+      // DOM 元素（使用 jQuery）
+      const $connectWalletBtn = $('#connectWallet');
+      const $disconnectWalletBtn = $('#disconnectWallet');
+      const $accountInfo = $('#accountInfo');
+      const $connectionStatus = $('#connectionStatus');
+      const $contractSection = $('#contractSection');
+
+      const $sayHiBtn = $('#sayHiBtn');
+      const $sayHiResult = $('#sayHiResult');
+
+      const $setInfoBtn = $('#setInfoBtn');
+      const $nameInput = $('#nameInput');
+      const $ageInput = $('#ageInput');
+      const $setInfoStatus = $('#setInfoStatus');
+
+      const $getInfoBtn = $('#getInfoBtn');
+      const $getInfoResult = $('#getInfoResult');
+
+      const $startListeningBtn = $('#startListening');
+      const $stopListeningBtn = $('#stopListening');
+      const $eventLog = $('#eventLog');
+
+      // 工具函数
+      function showStatus($element, message, type = 'info') {
+        $element.html(`<div class="status ${type}">${message}</div>`);
+      }
+
+      function clearStatus($element) {
+        $element.html('');
+      }
+
+      // 检查是否安装了 MetaMask
+      function checkMetaMask() {
+        if (typeof window.ethereum !== 'undefined') {
+          console.log('MetaMask 已安装');
+          return true;
+        } else {
+          showStatus($connectionStatus, '请安装 MetaMask 钱包扩展！', 'error');
+          return false;
+        }
+      }
+
+      // 连接钱包 (使用 ethers v6 语法)
+      async function connectWallet() {
+        if (!checkMetaMask()) return;
+
+        try {
+          showStatus($connectionStatus, '正在连接钱包...', 'info');
+
+          // 请求账户权限
+          const accounts = await window.ethereum.request({
+            method: 'eth_requestAccounts',
+          });
+
+          if (accounts.length === 0) {
+            throw new Error('没有找到账户');
+          }
+
+          currentAccount = accounts[0];
+
+          // 创建 provider 和 signer (ethers v6 语法)
+          provider = new ethers.BrowserProvider(window.ethereum);
+          signer = await provider.getSigner();
+
+          // 创建合约实例 (ethers v6 语法)
+          contract = new ethers.Contract(
+            CONTRACT_ADDRESS,
+            CONTRACT_ABI,
+            signer
+          );
+
+          // 更新 UI
+          updateConnectionUI(true);
+          showStatus($connectionStatus, '钱包连接成功！', 'success');
+        } catch (error) {
+          console.error('连接钱包失败:', error);
+          showStatus($connectionStatus, `连接失败: ${error.message}`, 'error');
+        }
+      }
+
+      // 断开连接
+      function disconnectWallet() {
+        provider = null;
+        signer = null;
+        contract = null;
+        currentAccount = null;
+
+        // 停止事件监听
+        if (eventListener && contract) {
+          contract.off('Instructor', eventListener);
+          eventListener = null;
+        }
+
+        updateConnectionUI(false);
+        showStatus($connectionStatus, '已断开钱包连接', 'info');
+        clearAllResults();
+      }
+
+      // 更新连接状态 UI
+      function updateConnectionUI(connected) {
+        if (connected) {
+          $connectWalletBtn.addClass('hidden');
+          $disconnectWalletBtn.removeClass('hidden');
+          $accountInfo.removeClass('hidden');
+          $contractSection.removeClass('hidden');
+          $accountInfo.text(`已连接账户: ${currentAccount}`);
+        } else {
+          $connectWalletBtn.removeClass('hidden');
+          $disconnectWalletBtn.addClass('hidden');
+          $accountInfo.addClass('hidden');
+          $contractSection.addClass('hidden');
+        }
+      }
+
+      // 清除所有结果
+      function clearAllResults() {
+        clearStatus($sayHiResult);
+        clearStatus($setInfoStatus);
+        clearStatus($getInfoResult);
+        clearStatus($eventLog);
+      }
+
+      // sayHi 函数
+      async function callSayHi() {
+        if (!contract) {
+          showStatus($sayHiResult, '请先连接钱包', 'error');
+          return;
+        }
+
+        try {
+          showStatus($sayHiResult, '正在调用 sayHi()...', 'info');
+          const result = await contract.sayHi();
+          showStatus($sayHiResult, `sayHi() 返回: "${result}"`, 'success');
+        } catch (error) {
+          console.error('调用 sayHi 失败:', error);
+          showStatus($sayHiResult, `调用失败: ${error.message}`, 'error');
+        }
+      }
+
+      // 设置信息
+      async function setInfo() {
+        if (!contract) {
+          showStatus($setInfoStatus, '请先连接钱包', 'error');
+          return;
+        }
+
+        const name = $nameInput.val().trim();
+        const age = parseInt($ageInput.val());
+
+        if (!name || isNaN(age) || age < 0) {
+          showStatus($setInfoStatus, '请输入有效的姓名和年龄', 'error');
+          return;
+        }
+
+        try {
+          showStatus($setInfoStatus, '正在设置信息...', 'info');
+
+          const tx = await contract.setInfo(name, age);
+          showStatus(
+            $setInfoStatus,
+            `交易已发送，交易哈希: ${tx.hash}`,
+            'info'
+          );
+
+          // 等待交易确认
+          const receipt = await tx.wait();
+          showStatus(
+            $setInfoStatus,
+            `设置成功！区块号: ${receipt.blockNumber}`,
+            'success'
+          );
+
+          // 清空输入框
+          $nameInput.val('');
+          $ageInput.val('');
+        } catch (error) {
+          console.error('设置信息失败:', error);
+          let errorMessage = error.message;
+
+          // 处理常见的错误信息
+          if (error.code === 'ACTION_REJECTED') {
+            errorMessage = '用户拒绝了交易';
+          } else if (error.code === 'INSUFFICIENT_FUNDS') {
+            errorMessage = '余额不足';
+          }
+
+          showStatus($setInfoStatus, `设置失败: ${errorMessage}`, 'error');
+        }
+      }
+
+      // 获取信息
+      async function getInfo() {
+        if (!contract) {
+          showStatus($getInfoResult, '请先连接钱包', 'error');
+          return;
+        }
+
+        try {
+          showStatus($getInfoResult, '正在获取信息...', 'info');
+          const result = await contract.getInfo();
+          const [name, age] = result;
+
+          if (name && age.toString() !== '0') {
+            showStatus(
+              $getInfoResult,
+              `当前信息 - 姓名: "${name}", 年龄: ${age.toString()}`,
+              'success'
+            );
+          } else {
+            showStatus($getInfoResult, '暂无信息或信息为空', 'info');
+          }
+        } catch (error) {
+          console.error('获取信息失败:', error);
+          showStatus($getInfoResult, `获取失败: ${error.message}`, 'error');
+        }
+      }
+
+      // 开始监听事件
+      function startListening() {
+        if (!contract) {
+          showStatus($eventLog, '请先连接钱包', 'error');
+          return;
+        }
+
+        if (eventListener) {
+          showStatus($eventLog, '已在监听事件中...', 'info');
+          return;
+        }
+
+        // 创建事件监听器 (ethers v6 语法)
+        eventListener = (...args) => {
+          // 在 ethers v6 中，事件参数的顺序是: ...eventArgs, event
+          const event = args[args.length - 1]; // 最后一个参数是事件对象
+          const [name, age] = args.slice(0, -1); // 其他参数是事件数据
+
+          const timestamp = new Date().toLocaleString();
+          const eventInfo = `
+            <div class="status success">
+              [${timestamp}] 检测到 Instructor 事件<br>
+              姓名: "${name}", 年龄: ${age.toString()}<br>
+              交易哈希: ${
+                event.transactionHash || event.log?.transactionHash || 'N/A'
+              }
+            </div>
+          `;
+          $eventLog.html(eventInfo + $eventLog.html());
+        };
+
+        // 开始监听 (ethers v6 语法)
+        contract.on('Instructor', eventListener);
+        showStatus($eventLog, '开始监听 Instructor 事件...', 'info');
+      }
+
+      // 停止监听事件
+      function stopListening() {
+        if (eventListener && contract) {
+          contract.off('Instructor', eventListener);
+          eventListener = null;
+          showStatus($eventLog, '已停止监听事件', 'info');
+        } else {
+          showStatus($eventLog, '当前没有在监听事件', 'info');
+        }
+      }
+
+      // 监听账户变化
+      if (window.ethereum) {
+        window.ethereum.on('accountsChanged', (accounts) => {
+          if (accounts.length === 0) {
+            disconnectWallet();
+          } else if (currentAccount && accounts[0] !== currentAccount) {
+            // 账户发生变化，重新连接
+            connectWallet();
+          }
+        });
+
+        window.ethereum.on('chainChanged', () => {
+          // 网络发生变化，刷新页面
+          window.location.reload();
+        });
+      }
+
+      // 事件监听器 (使用 jQuery)
+      $(document).ready(function () {
+        $connectWalletBtn.on('click', connectWallet);
+        $disconnectWalletBtn.on('click', disconnectWallet);
+        $sayHiBtn.on('click', callSayHi);
+        $setInfoBtn.on('click', setInfo);
+        $getInfoBtn.on('click', getInfo);
+        $startListeningBtn.on('click', startListening);
+        $stopListeningBtn.on('click', stopListening);
+
+        // 页面加载完成后检查连接状态
+        if (checkMetaMask()) {
+          // 检查是否已经连接
+          window.ethereum
+            .request({
+              method: 'eth_accounts',
+            })
+            .then((accounts) => {
+              if (accounts.length > 0) {
+                // 自动连接
+                connectWallet();
+              }
+            })
+            .catch((error) => {
+              console.error('检查连接状态失败:', error);
+            });
+        }
+      });
+    </script>
+  </body>
+</html>

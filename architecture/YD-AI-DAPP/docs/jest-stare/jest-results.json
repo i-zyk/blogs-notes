@@ -1,0 +1,362 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 9,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 1,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 2,
+  "numTotalTests": 10,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1751564962469,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 9,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1751564962956,
+        "loadTestEnvironmentEnd": 1751564962642,
+        "loadTestEnvironmentStart": 1751564962576,
+        "runtime": 313,
+        "setupAfterEnvEnd": 1751564962833,
+        "setupAfterEnvStart": 1751564962828,
+        "setupFilesEnd": 1751564962643,
+        "setupFilesStart": 1751564962643,
+        "slow": false,
+        "start": 1751564962643
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 47,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.address (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:6:11)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress formats normal ethereum address correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962837,
+          "status": "failed",
+          "title": "formats normal ethereum address correctly"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.address (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:13:11)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress formats address without 0x prefix correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962893,
+          "status": "failed",
+          "title": "formats address without 0x prefix correctly"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.address (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:20:11)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress formats with custom lengths correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962897,
+          "status": "failed",
+          "title": "formats with custom lengths correctly"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.<anonymous> (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:22:25)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress handles empty address",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962899,
+          "status": "failed",
+          "title": "handles empty address"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.<anonymous> (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:32:8)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress return original address if too short",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962901,
+          "status": "failed",
+          "title": "return original address if too short"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.<anonymous> (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:39:8)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress handles original equal to start + end length",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962903,
+          "status": "failed",
+          "title": "handles original equal to start + end length"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.adresss (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:47:11)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress handles various start and end length combinations",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962906,
+          "status": "failed",
+          "title": "handles various start and end length combinations"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.<anonymous> (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:53:53)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress handles null or undefined address",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962909,
+          "status": "failed",
+          "title": "handles null or undefined address"
+        },
+        {
+          "ancestorTitles": [
+            "formatWalletAddress"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [
+            {
+              "code": "MODULE_NOT_FOUND",
+              "hint": "",
+              "siblingWithSimilarExtensionFound": false,
+              "moduleName": "@/utils/index",
+              "_originalMessage": "Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'"
+            }
+          ],
+          "failureMessages": [
+            "Error: Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n    at Resolver._throwModNotFoundError (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:1482:37)\n    at Runtime.requireModuleOrMock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runtime@30.0.3/node_modules/jest-runtime/build/index.js:957:16)\n    at _index (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:1:38)\n    at Object.<anonymous> (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/address.spec.ts:66:26)\n    at Promise.finally.completed (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1559:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1499:10)\n    at _callCircusTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1009:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:949:3)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/jestAdapterInit.js:1920:21)\n    at jestAdapter (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-circus@30.0.3/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:272:16)\n    at runTest (/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/node_modules/.pnpm/jest-runner@30.0.3/node_modules/jest-runner/build/index.js:340:7)"
+          ],
+          "fullName": "formatWalletAddress handles non-standard length addresses",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1751564962912,
+          "status": "failed",
+          "title": "handles non-standard length addresses"
+        }
+      ],
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › formats normal ethereum address correctly\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.address (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:6:11)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › formats address without 0x prefix correctly\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.address (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:13:11)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › formats with custom lengths correctly\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.address (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:20:11)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › handles empty address\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:22:25)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › return original address if too short\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:32:8)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › handles original equal to start + end length\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:39:8)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › handles various start and end length combinations\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.adresss (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:47:11)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › handles null or undefined address\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:53:53)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress › handles non-standard length addresses\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index' from 'tests/unit/address.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m'@/utils/index'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试正常的以太坊地址格式化\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/.pnpm/jest-resolve@30.0.2/node_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _index (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:38)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/address.spec.ts\u001b[39m\u001b[0m\u001b[2m:66:26)\u001b[22m\u001b[2m\u001b[22m\n"
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1751564963031,
+        "loadTestEnvironmentEnd": 1751564962985,
+        "loadTestEnvironmentStart": 1751564962981,
+        "runtime": 45,
+        "setupAfterEnvEnd": 1751564963027,
+        "setupAfterEnvStart": 1751564963026,
+        "setupFilesEnd": 1751564962986,
+        "setupFilesStart": 1751564962986,
+        "slow": false,
+        "start": 1751564962986
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/mac/Desktop/blogs-notes/architecture/YD-AI-DAPP/tests/unit/index.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "综合性的测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "综合性的测试 简单的测试",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1751564963028,
+          "status": "passed",
+          "title": "简单的测试"
+        }
+      ],
+      "failureMessage": null
+    }
+  ],
+  "wasInterrupted": false
+}

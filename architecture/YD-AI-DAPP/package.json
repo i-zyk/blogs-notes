@@ -3,23 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "client:dev": "webpack --mode development",
+    "client:dev": "scripty",
     "client:server": "webpack serve --mode development",
     "client:prod": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:e2e": "cypress open",
     "test:uidiff": "npx backstop test",
     "lint:fix": "tsc --noEmit & eslint ./src --ext .ts,.tsx,.js --fix",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "jest --collectCoverage --reporters default jest-stare",
+    "test:ui": "majestic"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "jest-stare": {
+    "coverageLink": "../jest-coverage/lcov-report/index.html",
+    "resultDir": "docs/jest-stare"
+  },
   "devDependencies": {
     "@soda/friendly-errors-webpack-plugin": "^1.8.1",
     "@swc/core": "^1.12.1",
+    "@swc/jest": "^0.2.38",
     "@tailwindcss/postcss": "^4.1.10",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -37,6 +45,8 @@
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
     "jest": "^30.0.3",
+    "jest-stare": "^2.5.2",
+    "majestic": "^1.8.1",
     "mini-css-extract-plugin": "^2.9.2",
     "node-notifier": "^10.0.1",
     "postcss": "^8.5.6",
@@ -44,6 +54,7 @@
     "prettier": "^3.6.2",
     "puppeteer": "^24.11.2",
     "rize": "^0.9.0",
+    "scripty": "^3.0.0",
     "selenium-webdriver": "^4.34.0",
     "style-loader": "^4.0.0",
     "swc-loader": "^0.2.6",
@@ -58,6 +69,9 @@
   },
   "dependencies": {
     "@welldone-software/why-did-you-render": "^10.0.1",
+    "cypress": "^14.5.1",
+    "ethers": "^6.15.0",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
