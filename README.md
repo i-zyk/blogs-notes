@@ -38,5 +38,8 @@
   + [Item 15: **算法设计思想之“回溯算法”**](algorithms/15.算法设计思想之“回溯算法”.md)
 + List 4 **前端架构设计指南**
   + [Item 1: **前端架构设计指南1-2**](architecture/1.前端架构设计指南1-2.md)
-  + [Item 2: **前端架构设计指南3**](architecture/2.前端架构设计指南3.md)
-  + [Item 3: **前端架构设计指南4**](architecture/3.前端架构设计指南4.md)
+  + [Item 2: **前端架构设计指南3**](architecture/3.前端架构设计指南3.md)
+  + [Item 3: **前端架构设计指南4**](architecture/4.前端架构设计指南4.md)
+  + [Item 4: **前端架构设计指南5**](architecture/5.前端架构设计指南5.md)
+  + [Item 5: **前端架构设计指南6**](architecture/6.前端架构设计指南6.md)
+  + [Item 6: **前端架构设计指南7**](architecture/7.前端架构设计指南7.md)
