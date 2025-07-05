@@ -34,6 +34,10 @@ module.exports = {
       })
     ]
   },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   plugins: [
     // new WorkboxPlugin.GenerateSW({
     //   clientsClaim: true, // Service Worker 激活后立即控制页面

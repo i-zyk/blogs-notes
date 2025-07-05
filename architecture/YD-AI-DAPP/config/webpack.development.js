@@ -13,6 +13,13 @@ module.exports = {
     hot: true,
     port,
   },
+  output: {
+    publicPath: '/',
+    //如果是通过loader 编译的 放到scripts文件夹里 filename
+    filename: 'scripts/[name].bundle.js',
+    //如果是通过'asset/resource' 编译的
+    assetModuleFilename: 'images/[name].[ext]',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -30,15 +37,15 @@ module.exports = {
       //   logo,
       //   suppressSuccess: true
       // })
-      onErrors: function (serverity, errors) {
-        if (serverity !== 'error') {
+      onErrors: function (severity, errors) {
+        if (severity !== 'error') {
           return;
         }
         const error = errors[0];
         console.log(error);
         notifier.notify({
           title: 'Webpack Build Error',
-          message: serverity + ': ' + error.name,
+          message: severity + ': ' + error.name,
           subtitle: error.file || '',
           icon: join(__dirname, 'icon.png'),
         });
