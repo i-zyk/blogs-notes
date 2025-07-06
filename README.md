@@ -43,3 +43,5 @@
   + [Item 4: **前端架构设计指南5**](architecture/4.前端架构设计指南5.md)
   + [Item 5: **前端架构设计指南6**](architecture/5.前端架构设计指南6.md)
   + [Item 6: **前端架构设计指南7**](architecture/6.前端架构设计指南7.md)
+  + [Item 7: **前端架构设计指南8-9**](architecture/7.前端架构设计指南8-9.md)
+  + [Item 8: **前端架构设计指南10**](architecture/8.前端架构设计指南10.md)
