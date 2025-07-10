@@ -14,6 +14,12 @@ import serve from 'koa-static';
 import { loadControllers, scopePerRequest } from 'awilix-koa';
 // koa中没有实现的路由重定向到index.hmlt
 import { historyApiFallback } from 'koa2-connect-history-api-fallback';
+import { configure, getLogger } from 'log4js';
+//日志系统
+configure({
+  appenders: { cheese: { type: 'file', filename: `${__dirname}/logs/yd.log` } },
+  categories: { default: { appenders: ['cheese'], level: 'error' } },
+});
 
 const app = new Koa();
 const { port, viewDir, memoryFlag, staticDir } = config;
@@ -43,6 +49,11 @@ app.context.render = co.wrap(
 app.use(historyApiFallback({ index: '/', whiteList: ['/api'] }));
 // 让所有的路由全部生效
 app.use(loadControllers(`${__dirname}/routers/*.ts`));
-app.listen(port, () => {
-  console.log('YD Server BFF启动成功');
-});
+
+if (process.env.NODE_ENV === 'development') {
+  app.listen(port, () => {
+    console.log('YD Server BFF启动成功');
+  });
+}
+
+export default app;
