@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@scroll-timeline</title>
+    <style>
+      main {
+        display: block;
+        height: 1000vh;
+        text-align: center;
+        line-height: 100vh;
+      }
+      body {
+        background: linear-gradient(to right top, #0089f2 50%, #ddd 50%);
+        background-size: 100% calc(100% - 100vh);
+      }
+      body:before {
+        content: '';
+        position: fixed;
+        top: 5px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+        background: white;
+      }
+      /* @media (prefers-reduced-motion: no-preference) {
+        @scroll-timeline progress-timeline {
+          source: (#bodyselector);
+          start: 0;
+          end: 100%;
+        }
+
+        @keyframes progress {
+          to {
+            width: 100%;
+          }
+        }
+
+        #progress {
+          width: 0px;
+          height: 30px;
+          background: red;
+          animation: 1s linear forwards progress progress-timeline;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>在这个区域内滚动鼠标</h1>
+    </main>
+    <script>
+      if (
+        window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+      ) {
+        var animation = div.animate(
+          { width: '100%' },
+          { duration: 1000, fill: 'forwards' }
+        );
+        animation.timeline = new ScrollTimeline({
+          start: 0,
+          end: CSS.percent(100),
+        });
+      }
+    </script>
+  </body>
+</html>

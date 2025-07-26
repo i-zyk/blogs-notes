@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,viewport-fit=cover"
+    />
+    <title>Document</title>
+    <style>
+      @supports (padding-top: env(SAFE-AREA-INSET-TOP)) {
+        p {
+          width: 300px;
+          border: 2px solid red;
+          padding: env(SAFE-AREA-INSET-TOP, 12px)
+            env(SAFE-AREA-INSET-RIGHT, 50px) env(SAFE-AREA-INSET-BUTTOM, 35px)
+            env(SAFE-AREA-INSET-LEFT, 25px);
+        }
+      }
+      @supports not (padding-top: env(SAFE-AREA-INSET-TOP)) {
+        p {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      If the <code>env()</code> function is supported in your browser, this
+      paragraph’s text will have 50px of padding between it and the left border
+      — but not the top, right and bottom. This is because the accompanying CSS
+      is the equivalent of <code>padding: 0 0 0 50px</code>, because, unlike
+      other CSS properties, user agent property names are case-sensitive.
+    </p>
+  </body>
+</html>

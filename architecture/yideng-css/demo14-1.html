@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字体变量</title>
+    <style>
+      @font-face {
+        font-family: 'Decovar Regular24';
+        src: url('./Decovar-VF.ttf');
+      }
+
+      body {
+        background: #23074d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vw;
+        color: #fff;
+        width: 100vw;
+        min-height: 100vh;
+        font-family: 'Decovar Regular24', sans-serif;
+      }
+
+      p {
+        text-shadow: -1px -1px 0 #6e1f58, 1px -1px 0 #6e1f58, -1px 1px 0 #6e1f58,
+          1px 1px 0 #6e1f58, 1px 0px 0px #ff0080, 0px 1px 0px #ff0080,
+          2px 1px 0px #ff0080, 1px 2px 0px #ff0080, 3px 2px 0px #ff0080,
+          2px 3px 0px #ff0080, 4px 3px 0px #ff0080, 3px 4px 0px #ff0080,
+          5px 4px 0px #ff0080, 3px 5px 0px #6e1f58, 6px 5px 0px #6e1f58,
+          -1px 2px 0 black, 0 3px 0 #6e1f58, 1px 4px 0 #6e1f58,
+          2px 5px 0px #6e1f58, 2px -1px 0 #6e1f58, 3px 0 0 #6e1f58,
+          4px 1px 0 #6e1f58, 5px 2px 0px #6e1f58, 6px 3px 0 #6e1f58,
+          7px 4px 0 #6e1f58;
+        color: #ff8c00;
+        cursor: pointer;
+        font-weight: 800;
+        font-style: italic;
+        font-variation-settings: 'SSTR' 183, 'INLN' 648, 'TSHR' 460, 'TRSB' 312,
+          'TWRM' 638, 'SINL' 557, 'TOIL' 333, 'TINL' 526, 'WORM' 523;
+        transition: font-variation-settings 0.28s ease;
+      }
+      p:hover {
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: 'SSTR' 283, 'INLN' 248, 'TSHR' 160, 'TRSB' 112,
+          'TWRM' 338, 'SINL' 257, 'TOIL' 133, 'TINL' 426, 'WORM' 223;
+      }
+    </style>
+  </head>
+  <body>
+    <p>🏮www.yidengfe.com</p>
+  </body>
+</html>

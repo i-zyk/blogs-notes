@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>性能相关</title>
+    <style>
+      /* 低数据模式 */
+      @media (prefers-reduced-data: reduce) {
+        header {
+          background-image: url(/grunge.avif);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    1.CSS的content-visibility属性
+    可跳过不在屏幕上的内容渲染，包括布局（Layout）和渲染（Paint），
+    直到真正需要布局渲染的时候为止。所以利用它可以使用初始用户加载速度更快，
+    还能与屏幕上的内容进行更快的交互。懒加载是懒加载资源，他是懒渲染。
+    2.prefers-reduced-motion 检查用户是否开启了动画减弱功能 3.字体变量
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态模糊</title>
+    <style>
+      .animated-layer {
+        /* GPU加速动画 */
+        animation: rotate 0.5s linear infinite;
+
+        /* 向引擎请求动态模糊
+           * motion-rendering可以接受inherit | initial | auto | none | blur 值
+          */
+        motion-rendering: blur;
+
+        /* 类似于相机的快门，指的是快门角度，用来控制模糊量或模糊强度
+           * motion-shutter-angle可受任意角度值 inherit | initial | auto = 180deg | <a href="https://codepen.io/airen/pen/oNxQoLw">0deg, ..., 720deg]
+          */
+        motion-shutter-angle: 180deg;
+      }
+
+      @keyframes rotate {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    CSS的filter来模拟 https://codepen.io/ka4tik/pen/aFstu 提案transform-fiilter:
+    motion-blur(180deg)
+    <span>https://github.com/w3c/csswg-drafts/issues/3837</span>
+    JS 模拟方案https://www.motionblurjs.com/
+  </body>
+</html>

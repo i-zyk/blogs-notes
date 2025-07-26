@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>继续CSS next</title>
+    <style>
+      /* ===@nest时记得要和&结合在一起使用才有效。 */
+      .foo {
+        color: red;
+        @nest .parent & {
+          color: blue;
+        }
+      }
+      /* 等同于 */
+      .foo {
+        color: red;
+      }
+      .parent .foo {
+        color: blue;
+      }
+      /* ===继续另一种方式=== */
+      .foo {
+        color: red;
+        @nest :not(&) {
+          color: blue;
+        }
+      }
+      /* 等同于 */
+      .foo {
+        color: red;
+      }
+      :not(.foo) {
+        color: blue;
+      }
+      /* ===无效的几种方式=== */
+      /* 无效，因为没有嵌套选择器 */
+      .foo {
+        color: red;
+        @nest .bar {
+          color: blue;
+        }
+      }
+
+      /* 无效，因为不是列表中的所有选择器都包含嵌套选择器 */
+      .foo {
+        color: red;
+        @nest & .bar, .baz {
+          color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

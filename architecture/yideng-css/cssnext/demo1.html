@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS houdini进一步应用</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* String-based non-semantic custom properties on root */
+      :root {
+        --color1: pink;
+        --color2: orange;
+      }
+
+      /* Set Custom Properties Here */
+      @supports (background: paint(houdini)) {
+        @property --gradPoint {
+          syntax: '<percentage>';
+          inherits: false;
+          initial-value: 40%;
+        }
+      }
+
+      .post {
+        --gradPoint: 40%;
+        font-family: 'Amiri';
+        width: 380px;
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        background: pink; /* fallback value */
+        background: linear-gradient(
+          var(--color1) var(--gradPoint),
+          var(--color2) calc(var(--gradPoint) + 20%)
+        );
+        transition: --gradPoint 0.5s, filter 0.8s;
+      }
+
+      /* Fallback for interaction */
+      @supports not (background: paint(houdini)) {
+        .post:hover,
+        .post:focus {
+          /* filter: hue-rotate(-90deg); */
+          background: yellowgreen;
+        }
+      }
+      @supports (background: paint(houdini)) {
+        .post:hover,
+        .post:focus {
+          --gradPoint: 100%;
+        }
+      }
+
+      .container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: white;
+      }
+
+      h2 {
+        font-family: 'Montserrat', serif;
+        font-size: 1.4rem;
+        line-height: 1.2;
+      }
+
+      .desc {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="post">
+      <div class="container">
+        <h2>This Demo Requires Chrome 85+</h2>
+        <p class="desc">
+          支持CSS
+          Houdini的浏览器在悬停时会看到一个渐变停止转换。不受支持的浏览器将看到一个色调旋转的渐变背景
+        </p>
+      </div>
+    </a>
+  </body>
+</html>

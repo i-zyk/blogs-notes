@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="color-scheme" content="dark light" />
+    <style>
+      :root {
+        color-scheme: dark light;
+      }
+      /* :root {
+        --color: #fff;
+        --color-bg: #000;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        --color: #000;
+        --color-bg: #fff;
+      }
+
+      body {
+        color: var(--color);
+        background-color: var(--color-bg);
+      } */
+      span {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>京程一灯</h1>
+    <span>测试</span>
+    <script>
+      const meta = document.querySelector('meta[name="color-scheme"]');
+      let colorScheme = 'light';
+      meta.content = colorScheme;
+      window.setInterval(() => {
+        colorScheme = colorScheme === 'light' ? 'dark' : 'light';
+        document.documentElement.style.colorScheme = colorScheme;
+        meta.content = colorScheme;
+      }, 3000);
+    </script>
+  </body>
+</html>
