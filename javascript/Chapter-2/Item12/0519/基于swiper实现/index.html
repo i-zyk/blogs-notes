@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠峰培训就业班「挑战15~20万年薪」</title>
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <style>
+        .swiper-container {
+            width: 800px;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 自定义样式：看到插件生成的样式类和样式，我们自己按照样式类名去修改即可，如果想让我们自己写的样式权重最高，则设置!important */
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container" id="container1">
+        <!-- 轮播图 -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/banner01.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner03.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner04.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner05.png" alt="">
+            </div>
+        </div>
+        <!-- 分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 导航切换 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+
+    <!-- IMPORT JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        let sw1 = new Swiper('#container1', {
+            // 基础配置
+            initialSlide: 0, //初始展示slide的索引
+            direction: 'horizontal', //horizontal横向  vertical竖向
+            speed: 300, //每一次切换的动画时间
+            loop: true, //开启循环切换(左右运动实现了无缝衔接) 注意:索引因为克隆两张的原因发生改变了
+            effect: 'slide', //slide位移切换  fade淡入  cube方块  coverflow实现3D流  flip翻转
+            // 自动轮播
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            // 分页器 
+            pagination: {
+                el: '.swiper-pagination',
+                // type: 'bullets', //bullets圆点  fraction分式  progressbar进度条
+                clickable: true
+            },
+            // 左右导航
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next'
+            },
+            // 事件监听（回调函数）
+            on: {
+                // swiper参数：当前创造的这个类的实例
+                init(swiper) {
+                    console.log('初始化完成!');
+                },
+                transitionEnd(swiper) {
+                    let {
+                        activeIndex,
+                        realIndex,
+                        slides
+                    } = swiper;
+                    // console.log('切换化完成!', activeIndex, realIndex, slides);
+                }
+            }
+        });
+
+        // 自己控制鼠标进入/离开容器，同时管控自动轮播的暂停和继续
+        let container = document.querySelector('#container1');
+        container.addEventListener('mouseenter', () => sw1.autoplay.stop());
+        container.addEventListener('mouseleave', () => sw1.autoplay.start());
+    </script>
+</body>
+
+</html>

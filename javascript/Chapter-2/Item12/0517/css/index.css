@@ -1,0 +1,78 @@
+.container {
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px auto;
+    width: 1226px;
+    height: 460px;
+    overflow: hidden;
+}
+
+.container .wrapper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    /* 默认展示第一张 */
+    left: 0;
+    /* width是根据slide的数量决定的(不要忘记克隆的这一张) */
+    width: 400%;
+    height: 100%;
+    /* 每一次wrapper左右运动，都是改变left值，我们让其具备过渡动画效果 */
+    transition: left .3s;
+}
+
+.container .wrapper .slide {
+    width: 1226px;
+    height: 100%;
+}
+
+.container .wrapper .slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container .pagination {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .2);
+}
+
+.container .pagination span {
+    margin: 0 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+.container .pagination span.active {
+    background: rgb(98, 188, 244);
+}
+
+.container .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 69px;
+    background: url('../images/icon-slides.png') no-repeat;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.container .navigation.prev {
+    left: 0;
+    background-position: 0 50%;
+}
+
+.container .navigation.next {
+    right: 0;
+    background-position: -42px 50%;
+}
